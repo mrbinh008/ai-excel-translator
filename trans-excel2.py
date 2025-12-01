@@ -120,7 +120,8 @@ def translate_batch(texts, target_lang="ja"):
     try:
         # Call translation API
         response = client.chat.completions.create(
-            model="gemini-2.0-flash-lite", # Or "gemini-pro" or other suitable model
+            # model="gemini-2.0-flash-lite", # Or "gemini-pro" or other suitable model
+            model="gemini-2.5-flash-lite", # Or "gemini-pro" or other suitable model
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
